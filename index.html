@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing web development projects and skills">
+    <title>My Portfolio - Web Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <h1>Hi, I'm Mohamed Al-Banna</h1>
+                    <p class="subtitle">Front-End Developer | Cyber Security</p>
+                    <p style="opacity:.9;animation:fadeInUp 1s .3s both">I create beautiful, responsive websites that
+                        bring ideas to life</p>
+                    <button class="btn btn-custom"
+                        onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My
+                        Work</button>
+                    <button class="btn btn-custom btn-outline-custom"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In
+                        Touch</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-light-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image text-center">
+                    <img src="https://via.placeholder.com/300" alt="Profile">
+                </div>
+                <div class="about-text">
+                    <h3>Front-End Developer</h3>
+                    <p>I'm a passionate web developer with a love for creating beautiful and functional websites. With
+                        expertise in HTML, CSS, JavaScript, and modern frameworks, I transform ideas into engaging
+                        digital experiences.</p>
+                    <p>Currently studying at the Faculty of Industrial and Energy Technology, I'm constantly learning
+                        and exploring new technologies to stay at the forefront of web development.</p>
+                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source
+                        projects, or enjoying a good cup of coffee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <h4 class="skill-name">HTML5</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                        <h4 class="skill-name">CSS3</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-js"></i></div>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
+                        <h4 class="skill-name">Bootstrap</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            </div>
+            <div class="row" id="projects-container">
+                <div class="col-md-6 col-lg-4 project-item" data-category="web javascript">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Website</h3>
+                            <p class="project-category">Web Development</p>
+                            <p class="project-description">A fully responsive e-commerce platform with product catalog,
+                                cart functionality, and checkout process.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="javascript">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Weather Dashboard</h3>
+                            <p class="project-category">JavaScript App</p>
+                            <p class="project-description">Real-time weather application using API integration with
+                                beautiful UI and location search.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web design">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <p class="project-category">Web Design</p>
+                            <p class="project-description">Modern portfolio website with smooth animations and
+                                interactive elements.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="javascript">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 4" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Task Manager</h3>
+                            <p class="project-category">JavaScript App</p>
+                            <p class="project-description">Todo list application with filtering and task prioritization
+                                features.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 5" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Restaurant Website</h3>
+                            <p class="project-category">Web Development</p>
+                            <p class="project-description">Elegant restaurant website with menu display, reservation
+                                system, and contact form.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="design">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 6" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Landing Page</h3>
+                            <p class="project-category">Web Design</p>
+                            <p class="project-description">Creative landing page with stunning visuals and
+                                call-to-action elements.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                </div>
+                <input type="text" class="form-control" id="name" placeholder="Your Name *" required>
+                <div class="error-message" id="nameError">Please enter your name</div>
+                <input type="email" class="form-control" id="email" placeholder="Your Email *" required>
+                <div class="error-message" id="emailError">Please enter a valid email</div>
+                <input type="text" class="form-control" id="subject" placeholder="Subject *" required>
+                <div class="error-message" id="subjectError">Please enter a subject</div>
+                <textarea class="form-control" id="message" rows="5" placeholder="Your Message *" required></textarea>
+                <div class="error-message" id="messageError">Please enter your message</div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:albna3272@gmail.com"><p>albna3272@gmail.com</p></a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>01559500460</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>elbhera, Egypt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2025 MyPortfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+    
+</html>
