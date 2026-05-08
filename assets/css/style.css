@@ -85,6 +85,7 @@
             bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="200" cy="100" r="150" fill="rgba(255,255,255,0.05)"/><circle cx="900" cy="400" r="200" fill="rgba(255,255,255,0.05)"/></svg>');
             opacity: 0.5;
+            filter: blur(40px);
         }
 
         .hero-content {
@@ -185,6 +186,13 @@
         /* ========== قسم المهارات ========== */
         .skills-section {
             background-color: var(--light-bg);
+        }
+      .skill-img{
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            transition: all .3s ease;
         }
 
         .skill-box {
@@ -420,10 +428,11 @@
         }
 
         .social-links a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 55px;
             height: 55px;
-            line-height: 55px;
             background: rgba(255, 255, 255, 0.1);
             color: var(--white);
             border-radius: 50%;
