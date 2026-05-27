@@ -1,569 +1,299 @@
-/* ========== الألوان الأساسية ========== */
-        :root {
-            --main-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #60a5fa;
-            --dark-color: #1e293b;
-            --light-bg: #f1f5f9;
-            --text-color: #334155;
-            --white: #ffffff;
-            --gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-        }
-
-        /* ========== تنسيق عام ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ========== القائمة العلوية ========== */
-        .navbar {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--main-color) !important;
-            font-size: 26px;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-link {
-            color: var(--text-color) !important;
-            font-weight: 500;
-            margin: 0 15px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--main-color) !important;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--gradient);
-            transition: width 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* ========== القسم الرئيسي (Hero) ========== */
-        .hero-section {
-            background: var(--gradient);
-            color: var(--white);
-            padding: 120px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><circle cx="200" cy="100" r="150" fill="rgba(255,255,255,0.05)"/><circle cx="900" cy="400" r="200" fill="rgba(255,255,255,0.05)"/></svg>');
-            opacity: 0.5;
-            filter: blur(40px);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-section h1 {
-            font-size: 52px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .hero-section p {
-            font-size: 22px;
-            margin-bottom: 35px;
-            opacity: 0.95;
-        }
-
-        .btn-custom {
-            background-color: var(--white);
-            color: var(--main-color);
-            padding: 14px 35px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .btn-custom:hover {
-            background-color: var(--dark-color);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        /* ========== عنوان الأقسام ========== */
-        .section-title {
-            text-align: center;
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 60px;
-            color: var(--dark-color);
-            position: relative;
-            padding-bottom: 20px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
-
-        .section {
-            padding: 90px 0;
-        }
-
-        /* ========== قسم عني ========== */
-        .about-section {
-            background-color: var(--white);
-        }
-
-        .about-img {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid var(--main-color);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .about-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
-        }
-
-        .about-text {
-            font-size: 18px;
-            line-height: 1.9;
-            color: var(--text-color);
-        }
-
-        .about-text p {
-            margin-bottom: 18px;
-        }
-
-        /* ========== قسم المهارات ========== */
-        .skills-section {
-            background-color: var(--light-bg);
-        }
-      .skill-img{
-            width: 52px;
-            height: 52px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            transition: all .3s ease;
-        }
-
-        .skill-box {
-            background-color: var(--white);
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .skill-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
-            border-color: var(--accent-color);
-        }
-
-        .skill-icon {
-            font-size: 55px;
-            color: var(--main-color);
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-box:hover .skill-icon {
-            transform: scale(1.1);
-            color: var(--secondary-color);
-        }
-
-        .skill-name {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-
-        .skill-level {
-            font-size: 16px;
-            color: #64748b;
-            font-weight: 500;
-        }
-
-        /* ========== قسم المشاريع ========== */
-        .projects-section {
-            background-color: var(--white);
-        }
-
-        .project-card {
-            background-color: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
-            border-color: var(--accent-color);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover .project-img {
-            transform: scale(1.05);
-        }
-
-        video {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .project-info {
-            padding: 25px;
-        }
-
-        .project-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--dark-color);
-        }
-
-        .project-description {
-            color: var(--text-color);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .project-link {
-            background: var(--gradient);
-            color: var(--white);
-            padding: 10px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            background: var(--dark-color);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        /* ========== قسم التواصل ========== */
-        .contact-section {
-            background-color: var(--light-bg);
-        }
-
-        .contact-form {
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .form-control {
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--main-color);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .btn-submit {
-            background: var(--gradient);
-            color: var(--white);
-            padding: 15px 40px;
-            border: none;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background: var(--dark-color);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .success-msg {
-            background-color: #10b981;
-            color: var(--white);
-            padding: 18px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            display: none;
-            font-weight: 600;
-        }
-
-        .error-msg {
-            color: #ef4444;
-            font-size: 14px;
-            margin-top: -15px;
-            margin-bottom: 15px;
-            display: none;
-            font-weight: 500;
-        }
-
-        /* ========== معلومات التواصل ========== */
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item {
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-item i {
-            font-size: 2.5rem;
-            color: var(--main-color);
-            margin-bottom: 0.8rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover i {
-            color: var(--secondary-color);
-            transform: scale(1.1);
-        }
-
-        .contact-item p {
-            color: var(--text-color);
-            font-weight: 500;
-            margin: 0;
-        }
-
-        /* ========== Footer ========== */
-        footer {
-            background: var(--dark-color);
-            color: var(--white);
-            padding: 3rem 0 1.5rem;
-        }
-
-        .social-links {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 55px;
-            height: 55px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border-radius: 50%;
-            margin: 0 0.6rem;
-            font-size: 1.6rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--main-color);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
-        }
-
-        .footer-text {
-            text-align: center;
-            opacity: 0.8;
-            font-size: 15px;
-        }
-
-        /* ========== زر الوضع الداكن ========== */
-        .theme-toggle {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.6rem;
-            cursor: pointer;
-            box-shadow: 0 5px 25px rgba(37, 99, 235, 0.4);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .theme-toggle:hover {
-            transform: rotate(180deg) scale(1.1);
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.5);
-        }
-
-        /* ========== الوضع الداكن ========== */
-        body.dark-mode {
-            background: #0f172a;
-            color: #e2e8f0;
-        }
-
-        body.dark-mode .navbar {
-            background: rgba(15, 23, 42, 0.95);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        body.dark-mode .nav-link {
-            color: #e2e8f0 !important;
-        }
-
-        body.dark-mode .about-section,
-        body.dark-mode .projects-section {
-            background: #1e293b;
-        }
-
-        body.dark-mode .skills-section,
-        body.dark-mode .contact-section {
-            background: #0f172a;
-        }
-
-        body.dark-mode .skill-box,
-        body.dark-mode .project-card {
-            background: #334155;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-
-        body.dark-mode .section-title,
-        body.dark-mode .project-title,
-        body.dark-mode .skill-name,
-        body.dark-mode .about-text,
-        body.dark-mode .about-text p,
-        body.dark-mode .project-description,
-        body.dark-mode .skill-level {
-            color: #e2e8f0;
-        }
-
-        body.dark-mode .project-description {
-            color: #cbd5e1;
-        }
-
-        body.dark-mode .form-control {
-            background: #334155;
-            color: #e2e8f0;
-            border-color: #475569;
-        }
-
-        body.dark-mode .form-control::placeholder {
-            color: #94a3b8;
-        }
-
-        body.dark-mode .contact-item p {
-            color: #e2e8f0;
-        }
-
-        body.dark-mode .contact-item a {
-            color: #e2e8f0;
-        }
-
-        body.dark-mode .contact-item a:hover p {
-            color: #60a5fa;
-        }
-
-        /* ========== للموبايل ========== */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 36px;
-            }
-            
-            .hero-section p {
-                font-size: 18px;
-            }
-            
-            .section-title {
-                font-size: 32px;
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-
-            .contact-info {
-                gap: 2rem;
-            }
-        }
+:root {
+    --bg: #0a0a0f;
+    --bg-card: #13131a;
+    --bg-hover: #1c1c26;
+    --accent: #4f8ef7;
+    --accent-dim: rgba(79,142,247,0.12);
+    --border: rgba(255,255,255,0.07);
+    --text: #e8e8f0;
+    --text-muted: #666678;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--accent) !important;
+    letter-spacing: -0.5px;
+}
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.2s;
+    font-size: 15px;
+}
+.nav-link:hover { color: var(--text) !important; }
+.navbar-toggler { border-color: var(--border); }
+.navbar-toggler-icon { filter: invert(1); }
+
+/* ── Hero ── */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79,142,247,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+.hero-section h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+.hero-section p {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+.btn-custom {
+    background: var(--accent);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+.btn-custom:hover {
+    background: #3a7aee;
+    color: var(--white);
+    transform: translateY(-2px);
+}
+.btn-custom:last-child {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+.btn-custom:last-child:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+/* ── Sections ── */
+.section { padding: 90px 0; }
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* ── About ── */
+.about-section { background: var(--bg-card); }
+.about-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    transition: border-color 0.3s;
+}
+.about-img:hover { border-color: var(--accent); }
+.about-text { font-size: 17px; color: var(--text-muted); line-height: 1.9; }
+.about-text p { margin-bottom: 16px; }
+
+/* ── Skills ── */
+.skills-section { background: var(--bg); }
+.skill-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 20px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.skill-box:hover {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+    transform: translateY(-4px);
+}
+.skill-icon {
+    font-size: 44px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    display: block;
+}
+.skill-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+.skill-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* ── Projects ── */
+.projects-section { background: var(--bg-card); }
+.project-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: all 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.project-card iframe {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border: none;
+}
+.project-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.project-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+.project-description {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    flex: 1;
+}
+.project-link {
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 9px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid rgba(79,142,247,0.2);
+    transition: all 0.2s;
+    align-self: flex-start;
+}
+.project-link:hover {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+
+/* ── Contact ── */
+.contact-section { background: var(--bg); }
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.contact-item { text-align: center; transition: transform 0.2s; }
+.contact-item:hover { transform: translateY(-4px); }
+.contact-item i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: block;
+}
+.contact-item p { color: var(--text-muted); font-size: 15px; margin: 0; }
+.contact-info a { text-decoration: none; color: inherit; }
+
+/* ── Footer ── */
+footer {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    padding: 40px 0 24px;
+}
+.social-links { text-align: center; margin-bottom: 20px; }
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: var(--bg-hover);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 50%;
+    margin: 0 6px;
+    font-size: 1.3rem;
+    transition: all 0.2s;
+}
+.social-links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+.footer-text { text-align: center; color: var(--text-muted); font-size: 14px; }
+
+
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .section { padding: 60px 0; }
+    .section-title { font-size: 28px; }
+    .contact-info { gap: 2rem; }
+}

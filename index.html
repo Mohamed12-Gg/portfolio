@@ -1,217 +1,157 @@
-```html
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohamed's Portfolio</title>
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Mohamed</a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm Mohamed</h1>
                 <p>Full Stack Web Developer</p>
-
                 <a href="#projects" class="btn-custom">View My Work</a>
-                <a href="#contactInfo" class="btn-custom">Contact Me</a>
+                <a href="#contact" class="btn-custom">Contact Me</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about-section section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-4 mb-md-0">
                     <img src="assets/images/Me.jpeg" alt="Mohamed's Photo" class="about-img" />
                 </div>
-
                 <div class="col-md-8">
                     <div class="about-text">
-                        <p>
-                            I'm a Full Stack Web Developer passionate about building modern,
-                            scalable, and user-friendly web applications. I work with both
-                            front-end and back-end technologies to create complete digital
-                            solutions.
-                        </p>
-
-                        <p>
-                            I completed intensive training at ITI in Full Stack Web
-                            Development using PHP and Laravel, where I gained hands-on
-                            experience building real-world projects and responsive systems.
-                        </p>
-
-                        <p>
-                            I enjoy turning ideas into functional products through clean
-                            code, modern design, and continuous learning.
-                        </p>
+                        <p>I'm a Full Stack Web Developer passionate about building modern, scalable, and user-friendly web applications. I work with both front-end and back-end technologies to create complete digital solutions.</p>
+                        <p>I completed intensive training at ITI in Full Stack Web Development using PHP and Laravel, where I gained hands-on experience building real-world projects and responsive systems.</p>
+                        <p>I enjoy turning ideas into functional products through clean code, modern design, and continuous learning.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="skills-section section">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
-
             <div class="row justify-content-center g-4">
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fab fa-html5 skill-icon"></i>
                         <div class="skill-name">HTML5</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fab fa-css3-alt skill-icon"></i>
                         <div class="skill-name">CSS3</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fab fa-js skill-icon"></i>
                         <div class="skill-name">JavaScript</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fab fa-php skill-icon"></i>
                         <div class="skill-name">PHP</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fab fa-laravel skill-icon"></i>
                         <div class="skill-name">Laravel</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fas fa-database skill-icon"></i>
                         <div class="skill-name">MySQL</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
-
                         <img src="assets/images/tailwind.svg" alt="Tailwind CSS" class="skill-img">
-
                         <div class="skill-name">Tailwind CSS</div>
-
-                        <div class="skill-level"></div>
-
                     </div>
                 </div>
-
-                <div class="col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="skill-box">
                         <i class="fab fa-git-alt skill-icon"></i>
                         <div class="skill-name">Git & GitHub</div>
-                        <div class="skill-level"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="projects-section section">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
-
-            <div class="row justify-content-center">
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-5">
+            <div class="row g-4 justify-content-center">
+                <!-- To Do List -->
+                <div class="col-md-4">
                     <div class="project-card">
-                        <img src="assets/images/To-Do-List.png" alt="To Do Organizer" class="project-img" />
-
+                        <img src="assets/images/To-Do-List.png" alt="To Do List" class="project-img" />
                         <div class="project-info">
                             <h3 class="project-title">To Do List</h3>
-
-                            <p class="project-description">
-                                A task manager where you can add your daily tasks and stay
-                                organized.
-                            </p>
-
-                            <a href="https://to-do-list-seven-ecru-13.vercel.app/" target="_blank" class="project-link">
-                                View Project
-                            </a>
+                            <p class="project-description">A task manager where you can add your daily tasks and stay organized.</p>
+                            <a href="https://to-do-list-seven-ecru-13.vercel.app/" target="_blank" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-5">
+                <!-- Social Media -->
+                <div class="col-md-4">
                     <div class="project-card">
-                        <iframe width="105%" height="260" src="https://www.youtube.com/embed/zScpdvsi8-s" title="LMS"
-                            frameborder="0" allowfullscreen>
-                        </iframe>
-
+                        <img src="assets/images/Social Media.png" alt="Social Media Platform" class="project-img" />
+                        <div class="project-info">
+                            <h3 class="project-title">Social Media Platform</h3>
+                            <p class="project-description">A full-featured social media platform built with Laravel & MySQL, supporting posts, image uploads, likes & comments, an admin dashboard, and a fully responsive dark mode UI.</p>
+                            <a href="https://socialmedia.infinityfreeapp.com/" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- LMS -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <iframe src="https://www.youtube.com/embed/zScpdvsi8-s" title="LMS" allowfullscreen></iframe>
                         <div class="project-info">
                             <h3 class="project-title">LMS Website</h3>
-
-                            <p class="project-description">
-                                A complete Learning Management System built using Laravel and
-                                MySQL with authentication, course management, student
-                                enrollment, and responsive dashboards.
-                            </p>
-
-                            <a href="https://www.youtube.com/watch?v=zScpdvsi8-s" target="_blank" class="project-link">
-                                Watch Video
-                            </a>
+                            <p class="project-description">A complete Learning Management System built using Laravel and MySQL with authentication, course management, student enrollment, and responsive dashboards.</p>
+                            <a href="https://www.youtube.com/watch?v=zScpdvsi8-s" target="_blank" class="project-link">Watch Video</a>
                         </div>
                     </div>
                 </div>
@@ -219,60 +159,10 @@
         </div>
     </section>
 
-   <!-- ========== قسم التواصل ========== -->
-     <section id="contact" class="contact-section section">
+    <!-- Contact -->
+    <section id="contact" class="contact-section section">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
-            <form action="https://formsubmit.co/albna3272@gmail.com" enctype="multipart/form-data" target="_blank" method="POST" class="contact-form" id="contactForm">
-                <!-- Success Message -->
-                <!-- <div class="success-msg" id="successMsg">
-                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent.
-                </div>  -->
-
-                <!-- FormSubmit Hidden Fields -->
-                <!-- <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" style="display:none"> -->
-
-                <!-- Name -->
-                <!-- <input 
-                    name="name"
-                    type="text" 
-                    class="form-control" 
-                    id="name" 
-                    placeholder="Your Name"
-                    required
-                >
-                <div class="error-msg" id="nameError">Please enter your name</div> -->
-
-                <!-- Email -->
-                <!-- <input 
-                    name="email"
-                    type="email" 
-                    class="form-control" 
-                    id="email" 
-                    placeholder="Your Email"
-                    required
-                >
-                <div class="error-msg" id="emailError">Please enter a valid email</div> -->
-
-                <!-- Message -->
-                <!-- <textarea 
-                    name="message"
-                    class="form-control" 
-                    id="message" 
-                    rows="5" 
-                    placeholder="Your Message"
-                    required
-                ></textarea>
-                <div class="error-msg" id="messageError">Please enter your message</div> -->
-
-                <!-- Submit Button -->
-                <!-- <button type="submit" class="btn-submit">Send Message</button> -->
-            <!-- </form> -->
-
-            <!-- Contact Info -->
             <div class="contact-info" id="contactInfo">
                 <div class="contact-item">
                     <a href="mailto:albna3272@gmail.com">
@@ -292,7 +182,7 @@
         </div>
     </section>
 
-    <!-- ========== Footer ========== -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="social-links">
@@ -303,15 +193,9 @@
         </div>
     </footer>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </div>
 
-    <!-- Bootstrap JS -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
     <script src="assets/js/script.js"></script>
-
 </body>
 </html>
