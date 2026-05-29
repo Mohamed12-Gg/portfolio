@@ -19,10 +19,10 @@
     margin-bottom: 48px;
   }
 
-  /* نفس لياوت الـ CV */
   .cert-viewer-wrap {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    /* استخدام minmax يجعل العمود الثاني مرناً على الشاشات المتوسطة قبل الانتقال للموبايل */
+    grid-template-columns: 1fr minmax(280px, 320px);
     gap: 32px;
     align-items: start;
     margin-bottom: 60px;
@@ -42,28 +42,31 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    width: 100%;
   }
 
   .cert-embed-box img {
     width: 100%;
+    height: auto; /* لضمان عدم تشوه أبعاد الصورة */
     display: block;
     border-radius: 20px;
+    object-fit: contain;
   }
 
-  /* نفس الـ sidebar */
   .cert-sidebar {
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: sticky;
     top: 90px;
+    width: 100%;
   }
 
   .cert-info-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 28px;
+    padding: 24px; /* تقليل البادينج قليلاً ليناسب الشاشات الصغيرة */
   }
 
   .cert-top-row {
@@ -71,11 +74,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
+    gap: 12px;
   }
 
   .cert-info-card .cert-num {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: linear-gradient(135deg, #7c5cff, #22d3ee);
     display: flex;
@@ -83,34 +87,35 @@
     justify-content: center;
     font-family: 'Sora', sans-serif;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 16px;
     color: #0b0d12;
     flex-shrink: 0;
   }
 
   .cert-logo-box {
-    width: 72px;
-    height: 72px;
-    border-radius: 14px;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
     border: 1px solid var(--border);
     background: var(--bg-2);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   .cert-logo-box img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 8px;
+    padding: 6px;
   }
 
   .cert-logo-box .cert-logo-fallback {
     font-family: 'Sora', sans-serif;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 14px;
     color: #c4b6ff;
     text-align: center;
     line-height: 1.2;
@@ -119,7 +124,7 @@
   .cert-info-card h3 {
     font-size: 17px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     line-height: 1.35;
   }
 
@@ -153,13 +158,14 @@
   .cert-actions .btn {
     justify-content: center;
     border-radius: 12px;
+    width: 100%;
   }
 
   .cert-highlight-card {
     background: linear-gradient(135deg, rgba(124,92,255,.12), rgba(34,211,238,.08));
     border: 1px solid rgba(124,92,255,.25);
     border-radius: 20px;
-    padding: 24px;
+    padding: 20px;
   }
 
   .cert-highlight-card h4 {
@@ -193,12 +199,40 @@
     margin-bottom: 2px;
   }
 
+  /* ── تحسين التجاوب للشاشات المتوسطة والصغيرة ── */
   @media (max-width: 880px) {
-    .cert-viewer-wrap {
-      grid-template-columns: 1fr;
+    .certs-page {
+      padding: 40px 5vw 60px;
     }
+    
+    .cert-viewer-wrap {
+      grid-template-columns: 1fr; /* تحويل العناصر لتصبح فوق بعضها */
+      gap: 24px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+    }
+    
     .cert-sidebar {
-      position: static;
+      position: static; /* إلغاء التثبيت الجانبي ليتحرك بسلاسة */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .certs-page {
+      padding: 32px 4vw 40px;
+    }
+    
+    .certs-page .section-head {
+      margin-bottom: 32px;
+    }
+
+    .cert-info-card {
+      padding: 20px;
+    }
+    
+    /* جعل أزرار التواصل تظهر بشكل أفضل على الموبايل الصغير */
+    .cert-actions {
+      gap: 8px;
     }
   }
 </style>
@@ -340,7 +374,6 @@
 
   <footer>
     <span>© <span id="year"></span> Mohamed Yasser Al-Banna</span>
-    <span>Crafted with HTML · CSS · JS</span>
   </footer>
 
   <script src="../js/script.js"></script>
