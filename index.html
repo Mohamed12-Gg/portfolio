@@ -1,210 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohamed's Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohamed Yasser Al-Banna — Back-End Developer</title>
+<meta name="description" content="Portfolio of Mohamed Yasser Al-Banna, a Full Stack Web Developer specializing in PHP, Laravel and MySQL." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Mohamed</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+  <header class="nav">
+    <a href="#home" class="logo">MY<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a href="#contact" class="btn btn-ghost">Hire Me</a>
+  </header>
 
-    <!-- Hero -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm Mohamed</h1>
-                <p>Full Stack Web Developer</p>
-                <a href="#projects" class="btn-custom">View My Work</a>
-                <a href="#contact" class="btn-custom">Contact Me</a>
-            </div>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text reveal">
+          <span class="eyebrow">Back-End Developer</span>
+          <h1>Building robust web apps with <span class="grad">PHP &amp; Laravel</span>.</h1>
+          <p>I'm Mohamed Yasser Al-Banna — a Full Stack Web Developer crafting dynamic, scalable web applications with clean MVC architecture and modern tooling.</p>
+          <div class="cta-row">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="quick-stats">
+            <div><strong>120+</strong><span>Hrs ITI Training</span></div>
+            <div><strong>2</strong><span>Featured Projects</span></div>
+            <div><strong>10+</strong><span>Technologies</span></div>
+          </div>
         </div>
+        <div class="hero-card reveal">
+          <div class="orb"></div>
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code><span class="k">class</span> <span class="c">Developer</span> {
+  <span class="k">public</span> <span class="fn">stack</span>() {
+    <span class="k">return</span> [
+      <span class="s">'Laravel'</span>, <span class="s">'PHP'</span>,
+      <span class="s">'MySQL'</span>, <span class="s">'Vue.js'</span>,
+      <span class="s">'Tailwind'</span>
+    ];
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="about-section section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="assets/images/Me.jpeg" alt="Mohamed's Photo" class="about-img" />
-                </div>
-                <div class="col-md-8">
-                    <div class="about-text">
-                        <p>I'm a Full Stack Web Developer passionate about building modern, scalable, and user-friendly web applications. I work with both front-end and back-end technologies to create complete digital solutions.</p>
-                        <p>I completed intensive training at ITI in Full Stack Web Development using PHP and Laravel, where I gained hands-on experience building real-world projects and responsive systems.</p>
-                        <p>I enjoy turning ideas into functional products through clean code, modern design, and continuous learning.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="about" class="section reveal">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>A developer focused on clean, scalable backends.</h2>
+      </div>
+      <div class="about-grid">
+        <p>Full Stack Web Developer trained in PHP, Laravel, MySQL and modern client-side technologies. I enjoy designing systems that follow MVC principles, are easy to maintain, and feel snappy to use.</p>
+        <ul class="info-list">
+          <li><span>Education</span> Borg El Arab University of Technology — Information Technology</li>
+          <li><span>Training</span> ITI — Full Stack Web Development using PHP (120 hrs)</li>
+          <li><span>Focus</span> Laravel · MySQL · API design · Performance</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="skills-section section">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="row justify-content-center g-4">
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fab fa-html5 skill-icon"></i>
-                        <div class="skill-name">HTML5</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fab fa-css3-alt skill-icon"></i>
-                        <div class="skill-name">CSS3</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fab fa-js skill-icon"></i>
-                        <div class="skill-name">JavaScript</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fab fa-php skill-icon"></i>
-                        <div class="skill-name">PHP</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fab fa-laravel skill-icon"></i>
-                        <div class="skill-name">Laravel</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fas fa-database skill-icon"></i>
-                        <div class="skill-name">MySQL</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <img src="assets/images/tailwind.svg" alt="Tailwind CSS" class="skill-img">
-                        <div class="skill-name">Tailwind CSS</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="skill-box">
-                        <i class="fab fa-git-alt skill-icon"></i>
-                        <div class="skill-name">Git & GitHub</div>
-                    </div>
-                </div>
-            </div>
+    <section id="skills" class="section reveal">
+      <div class="section-head">
+        <span class="eyebrow">Skills</span>
+        <h2>Tools I use.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
         </div>
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <div class="tags"><span>MySQL</span><span>MongoDB</span><span>Redis</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Frameworks</h3>
+          <div class="tags"><span>Laravel</span><span>Vue.js</span><span>Bootstrap</span><span>Tailwind</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <div class="tags"><span>Git</span><span>GitHub</span><span>JMeter</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>AI Tools</h3>
+          <div class="tags"><span>Claude</span><span>ChatGPT-5</span><span>Lovable</span><span>Vercel</span><span>Google Stitch</span></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="projects-section section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="row g-4 justify-content-center">
-                <!-- To Do List -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="assets/images/To-Do-List.png" alt="To Do List" class="project-img" />
-                        <div class="project-info">
-                            <h3 class="project-title">To Do List</h3>
-                            <p class="project-description">A task manager where you can add your daily tasks and stay organized.</p>
-                            <a href="https://to-do-list-seven-ecru-13.vercel.app/" target="_blank" class="project-link">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Social Media -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="assets/images/Social Media.png" alt="Social Media Platform" class="project-img" />
-                        <div class="project-info">
-                            <h3 class="project-title">Social Media Platform</h3>
-                            <p class="project-description">A full-featured social media platform built with Laravel & MySQL, supporting posts, image uploads, likes & comments, an admin dashboard, and a fully responsive dark mode UI.</p>
-                            <a href="https://socialmedia.infinityfreeapp.com/" target="_blank" class="project-link">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- LMS -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <iframe src="https://www.youtube.com/embed/zScpdvsi8-s" title="LMS" allowfullscreen></iframe>
-                        <div class="project-info">
-                            <h3 class="project-title">LMS Website</h3>
-                            <p class="project-description">A complete Learning Management System built using Laravel and MySQL with authentication, course management, student enrollment, and responsive dashboards.</p>
-                            <a href="https://www.youtube.com/watch?v=zScpdvsi8-s" target="_blank" class="project-link">Watch Video</a>
-                        </div>
-                    </div>
-                </div>
+    <section id="projects" class="section reveal">
+      <div class="section-head">
+        <span class="eyebrow">Projects</span>
+        <h2>Selected work.</h2>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <div class="project-num">01</div>
+          <div class="project-body">
+            <h3>Learning Management System (LMS)</h3>
+            <p>A complete LMS with authentication, course management, student enrollment, responsive dashboards and database performance tuning for scalability.</p>
+            <div class="tags"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span></div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=zScpdvsi8-s" class="btn btn-sm">Watch Video</a>
+              <a href="https://github.com/Mohamed12-Gg/LMS" class="btn btn-sm btn-ghost">GitHub</a>
             </div>
-        </div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-num">02</div>
+          <div class="project-body">
+            <h3>Social Media Platform</h3>
+            <p>Full-stack social platform with posts, comments, profiles, role-based auth (Admin/Subscriber), an admin dashboard with full CRUD, image uploads, and a glassmorphism UI.</p>
+            <div class="tags"><span>Laravel 12</span><span>MySQL</span><span>Bootstrap 5</span></div>
+            <div class="project-links">
+              <a href="https://socialmedia.infinityfreeapp.com/" class="btn btn-sm">Live Demo</a>
+              <a href="https://github.com/Mohamed12-Gg/Social-Media" class="btn btn-sm btn-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact-section section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-info" id="contactInfo">
-                <div class="contact-item">
-                    <a href="mailto:albna3272@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                        <p>albna3272@gmail.com</p>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="tel:01559500460">
-                    <i class="fas fa-phone"></i>
-                    <p>01559500460</p>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Behera, Egypt</p>
-                </div>
-            </div>
+    <section id="contact" class="section reveal contact">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's build together.</h2>
+      </div>
+      <div class="contact-card">
+        <p>Open to back-end and full-stack opportunities. Reach out and I'll get back to you quickly.</p>
+        <div class="contact-actions">
+          <a href="mailto:albna3272@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="tel:0155950460" class="btn btn-ghost">0155 950 460</a>
         </div>
+      </div>
     </section>
+  </main>
 
-        <!-- Theme Toggle -->
-<div class="theme-toggle" id="themeToggle" aria-label="Contact on WhatsApp">
-    <a href="https://wa.me/201559500460" target="_blank" style="color: inherit; text-decoration: none;">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+  <footer>
+    <span>© <span id="year"></span> Mohamed Yasser Al-Banna</span>
+    <span>Crafted with HTML · CSS · JS</span>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/Mohamed12-Gg" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mohamed-al-banna-16b736338" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <p class="footer-text">&copy; 2025 Mohamed's Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
