@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="../css/style.css" />
 <style>
   .cv-page {
     padding: 60px 6vw 80px;
@@ -163,8 +163,24 @@
       <a href="cv.html" style="color: var(--text)">CV</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <a href="index.html#contact" class="btn btn-ghost">Hire Me</a>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="index.html#contact" class="btn btn-ghost">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#skills" class="mobile-link">Skills</a>
+    <a href="index.html#projects" class="mobile-link">Projects</a>
+    <a href="cv.html" class="mobile-link active">CV</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+    <div class="mobile-cta">
+      <a href="index.html#contact" class="btn btn-primary mobile-link">Hire Me</a>
+    </div>
+  </div>
 
   <main>
     <div class="cv-page reveal">
@@ -228,5 +244,23 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
 </body>
 </html>
