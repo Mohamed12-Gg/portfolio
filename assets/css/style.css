@@ -79,11 +79,29 @@ a {
     color: var(--muted);
     font-weight: 500;
     font-size: 14px;
-    transition: color .2s
+    transition: color .2s, opacity .2s;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--grad);
+    transition: width .25s ease;
+    border-radius: 999px;
 }
 
 .nav nav a:hover {
-    color: var(--text)
+    color: var(--text);
+}
+
+.nav nav a:hover::after {
+    width: 100%;
 }
 
 /* Buttons */
@@ -91,38 +109,69 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 20px;
+    padding: 12px 24px;
     border-radius: 999px;
     font-weight: 600;
     font-size: 14px;
     border: 1px solid transparent;
     cursor: pointer;
-    transition: transform .2s ease, box-shadow .2s ease, background .2s;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s, border-color .25s, color .25s, opacity .25s;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: .01em;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0);
+    transition: background .25s ease;
+    pointer-events: none;
+}
+
+.btn:hover::after {
+    background: rgba(255, 255, 255, .06);
+}
+
+.btn:active {
+    transform: scale(.97) !important;
+    transition-duration: .1s;
 }
 
 .btn-primary {
     background: var(--grad);
     color: #0b0d12;
-    box-shadow: var(--shadow)
+    box-shadow: 0 0 0 0 rgba(124, 92, 255, 0);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px)
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px -8px rgba(124, 92, 255, .65), 0 0 0 1px rgba(124, 92, 255, .3);
 }
 
 .btn-ghost {
     border-color: var(--border);
     color: var(--text);
-    background: transparent
+    background: transparent;
 }
 
 .btn-ghost:hover {
-    background: var(--surface)
+    background: var(--surface);
+    border-color: rgba(124, 92, 255, .45);
+    color: #c4b6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px -6px rgba(124, 92, 255, .25);
 }
 
 .btn-sm {
-    padding: 8px 14px;
-    font-size: 13px
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.btn-sm:hover {
+    transform: translateY(-2px);
 }
 
 /* Hero */
@@ -368,18 +417,26 @@ a {
     border-radius: 16px;
     background: var(--surface);
     border: 1px solid var(--border);
-    transition: transform .25s, border-color .25s;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    cursor: default;
 }
 
 .skill-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(124, 92, 255, .5)
+    transform: translateY(-6px);
+    border-color: rgba(124, 92, 255, .5);
+    box-shadow: 0 12px 40px -16px rgba(124, 92, 255, .4);
+}
+
+.skill-card:hover h3 {
+    color: #c4b6ff;
+    transition: color .25s;
 }
 
 .skill-card h3 {
     font-size: 16px;
     margin-bottom: 14px;
-    color: var(--text)
+    color: var(--text);
+    transition: color .25s;
 }
 
 .tags {
@@ -396,6 +453,15 @@ a {
     background: rgba(124, 92, 255, .08);
     color: #c4b6ff;
     border: 1px solid rgba(124, 92, 255, .2);
+    transition: background .2s, border-color .2s, transform .2s;
+    display: inline-block;
+}
+
+.skill-card .tags span:hover,
+.project-body .tags span:hover {
+    background: rgba(124, 92, 255, .18);
+    border-color: rgba(124, 92, 255, .45);
+    transform: translateY(-1px);
 }
 
 /* Projects */
@@ -413,13 +479,19 @@ a {
     border-radius: 20px;
     background: var(--surface);
     border: 1px solid var(--border);
-    transition: transform .25s, border-color .25s, box-shadow .25s;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    cursor: default;
 }
 
 .project:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     border-color: rgba(124, 92, 255, .5);
-    box-shadow: var(--shadow)
+    box-shadow: 0 20px 60px -20px rgba(124, 92, 255, .4);
+}
+
+.project:hover .project-num {
+    filter: brightness(1.15);
+    transition: filter .3s;
 }
 
 .project-num {
@@ -459,6 +531,12 @@ a {
     background: linear-gradient(135deg, rgba(124, 92, 255, .12), rgba(34, 211, 238, .08));
     border: 1px solid rgba(124, 92, 255, .25);
     text-align: center;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.contact-card:hover {
+    border-color: rgba(124, 92, 255, .45);
+    box-shadow: 0 20px 60px -20px rgba(124, 92, 255, .25);
 }
 
 .contact-card p {

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV — Mohamed Yasser Al-Banna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  .cv-page {
+    padding: 60px 6vw 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .cv-page .section-head {
+    margin-bottom: 40px;
+  }
+
+  .cv-viewer-wrap {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .cv-embed-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .cv-embed-box iframe {
+    width: 100%;
+    height: 780px;
+    border: none;
+    display: block;
+  }
+
+  .cv-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 90px;
+  }
+
+  .cv-info-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+  }
+
+  .cv-info-card .avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c5cff, #22d3ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #0b0d12;
+    margin-bottom: 16px;
+  }
+
+  .cv-info-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .cv-info-card .role {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .cv-info-card .divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 20px;
+  }
+
+  .cv-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cv-actions .btn {
+    justify-content: center;
+    border-radius: 12px;
+  }
+
+  .cv-highlight-card {
+    background: linear-gradient(135deg, rgba(124,92,255,.12), rgba(34,211,238,.08));
+    border: 1px solid rgba(124,92,255,.25);
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  .cv-highlight-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #c4b6ff;
+  }
+
+  .cv-highlight-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cv-highlight-list li {
+    font-size: 13px;
+    color: var(--muted);
+    padding-left: 14px;
+    border-left: 2px solid rgba(124,92,255,.4);
+    border-radius: 0;
+    line-height: 1.5;
+  }
+
+  .cv-highlight-list li strong {
+    color: var(--text);
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: 880px) {
+    .cv-viewer-wrap {
+      grid-template-columns: 1fr;
+    }
+    .cv-sidebar {
+      position: static;
+    }
+    .cv-embed-box iframe {
+      height: 500px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="logo">MY<span>.</span></a>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="cv.html" style="color: var(--text)">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-ghost">Hire Me</a>
+  </header>
+
+  <main>
+    <div class="cv-page reveal">
+      <div class="section-head">
+        <span class="eyebrow">Resume</span>
+        <h2>My CV.</h2>
+      </div>
+
+      <div class="cv-viewer-wrap">
+
+        <div class="cv-embed-box">
+          <iframe
+            src="assets/cv/Mohamed_Yasser_Al-Banna.pdf"
+            title="Mohamed Yasser Al-Banna — CV">
+          </iframe>
+        </div>
+
+        <div class="cv-sidebar">
+          <div class="cv-info-card">
+            <div class="avatar">MY</div>
+            <h3>Mohamed Yasser Al-Banna</h3>
+            <p class="role">Back-End Developer · ITI Graduate</p>
+            <div class="divider"></div>
+            <div class="cv-actions">
+              <a href="assets/cv/Mohamed_Yasser_Al-Banna.pdf" download class="btn btn-primary">⬇ Download PDF</a>
+              <a href="index.html#contact" class="btn btn-ghost">✉ Contact Me</a>
+              <a href="https://wa.me/201559504460?text=Welcome%20Mohamed%20need%20you%20for%20job" target="_blank" rel="noopener" class="btn btn-ghost">💬 WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="cv-highlight-card">
+            <h4>Quick Highlights</h4>
+            <ul class="cv-highlight-list">
+              <li>
+                <strong>Training</strong>
+                ITI — Full Stack PHP (120 hrs)
+              </li>
+              <li>
+                <strong>Education</strong>
+                Borg El Arab University — IT
+              </li>
+              <li>
+                <strong>Stack</strong>
+                Laravel · PHP · MySQL · Vue.js
+              </li>
+              <li>
+                <strong>Projects</strong>
+                LMS · Social Media Platform
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Mohamed Yasser Al-Banna</span>
+    <span>Crafted with HTML · CSS · JS</span>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

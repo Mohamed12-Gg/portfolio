@@ -1,49 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mohamed Yasser Al-Banna — Back-End Developer</title>
-<meta name="description" content="Portfolio of Mohamed Yasser Al-Banna, a Full Stack Web Developer specializing in PHP, Laravel and MySQL." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
-  <header class="nav">
-    <a href="#home" class="logo">MY<span>.</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="btn btn-ghost">Hire Me</a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Yasser Al-Banna — Back-End Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Mohamed Yasser Al-Banna, a Full Stack Web Developer specializing in PHP, Laravel and MySQL."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="#home" class="logo">MY<span>.</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="cv.html">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-ghost">Hire Me</a>
+    </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-grid">
-        <div class="hero-text reveal">
-          <span class="eyebrow">Back-End Developer</span>
-          <h1>Building robust web apps with <span class="grad">PHP &amp; Laravel</span>.</h1>
-          <p>I'm Mohamed Yasser Al-Banna — a Full Stack Web Developer crafting dynamic, scalable web applications with clean MVC architecture and modern tooling.</p>
-          <div class="cta-row">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-grid">
+          <div class="hero-text reveal">
+            <span class="eyebrow">Back-End Developer</span>
+            <h1>
+              Building robust web apps with
+              <span class="grad">PHP &amp; Laravel</span>.
+            </h1>
+            <p>
+              I'm Mohamed Yasser Al-Banna — a Full Stack Web Developer crafting
+              dynamic, scalable web applications with clean MVC architecture and
+              modern tooling.
+            </p>
+            <div class="cta-row">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+            </div>
+            <div class="quick-stats">
+              <div><strong>120+</strong><span>Hrs ITI Training</span></div>
+              <div><strong>2</strong><span>Featured Projects</span></div>
+              <div><strong>10+</strong><span>Technologies</span></div>
+            </div>
           </div>
-          <div class="quick-stats">
-            <div><strong>120+</strong><span>Hrs ITI Training</span></div>
-            <div><strong>2</strong><span>Featured Projects</span></div>
-            <div><strong>10+</strong><span>Technologies</span></div>
-          </div>
-        </div>
-        <div class="hero-card reveal">
-          <div class="orb"></div>
-          <div class="code-window">
-            <div class="code-dots"><span></span><span></span><span></span></div>
-            <pre><code><span class="k">class</span> <span class="c">Developer</span> {
+          <div class="hero-card reveal">
+            <div class="orb"></div>
+            <div class="code-window">
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <pre><code><span class="k">class</span> <span class="c">Developer</span> {
   <span class="k">public</span> <span class="fn">stack</span>() {
     <span class="k">return</span> [
       <span class="s">'Laravel'</span>, <span class="s">'PHP'</span>,
@@ -52,108 +68,187 @@
     ];
   }
 }</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section reveal">
-      <div class="section-head">
-        <span class="eyebrow">About</span>
-        <h2>A developer focused on clean, scalable backends.</h2>
-      </div>
-      <div class="about-grid">
-        <p>Full Stack Web Developer trained in PHP, Laravel, MySQL and modern client-side technologies. I enjoy designing systems that follow MVC principles, are easy to maintain, and feel snappy to use.</p>
-        <ul class="info-list">
-          <li><span>Education</span> Borg El Arab University of Technology — Information Technology</li>
-          <li><span>Training</span> ITI — Full Stack Web Development using PHP (120 hrs)</li>
-          <li><span>Focus</span> Laravel · MySQL · API design · Performance</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="skills" class="section reveal">
-      <div class="section-head">
-        <span class="eyebrow">Skills</span>
-        <h2>Tools I use.</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Languages</h3>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Databases</h3>
-          <div class="tags"><span>MySQL</span><span>MongoDB</span><span>Redis</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Frameworks</h3>
-          <div class="tags"><span>Laravel</span><span>Vue.js</span><span>Bootstrap</span><span>Tailwind</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Tools</h3>
-          <div class="tags"><span>Git</span><span>GitHub</span><span>JMeter</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>AI Tools</h3>
-          <div class="tags"><span>Claude</span><span>ChatGPT-5</span><span>Lovable</span><span>Vercel</span><span>Google Stitch</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section reveal">
-      <div class="section-head">
-        <span class="eyebrow">Projects</span>
-        <h2>Selected work.</h2>
-      </div>
-      <div class="projects">
-        <article class="project">
-          <div class="project-num">01</div>
-          <div class="project-body">
-            <h3>Learning Management System (LMS)</h3>
-            <p>A complete LMS with authentication, course management, student enrollment, responsive dashboards and database performance tuning for scalability.</p>
-            <div class="tags"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span></div>
-            <div class="project-links">
-              <a href="https://www.youtube.com/watch?v=zScpdvsi8-s" class="btn btn-sm">Watch Video</a>
-              <a href="https://github.com/Mohamed12-Gg/LMS" class="btn btn-sm btn-ghost">GitHub</a>
             </div>
           </div>
-        </article>
-        <article class="project">
-          <div class="project-num">02</div>
-          <div class="project-body">
-            <h3>Social Media Platform</h3>
-            <p>Full-stack social platform with posts, comments, profiles, role-based auth (Admin/Subscriber), an admin dashboard with full CRUD, image uploads, and a glassmorphism UI.</p>
-            <div class="tags"><span>Laravel 12</span><span>MySQL</span><span>Bootstrap 5</span></div>
-            <div class="project-links">
-              <a href="https://socialmedia.infinityfreeapp.com/" class="btn btn-sm">Live Demo</a>
-              <a href="https://github.com/Mohamed12-Gg/Social-Media" class="btn btn-sm btn-ghost">GitHub</a>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="section-head">
+          <span class="eyebrow">About</span>
+          <h2>A developer focused on clean, scalable backends.</h2>
+        </div>
+        <div class="about-grid">
+          <p>
+            Full Stack Web Developer trained in PHP, Laravel, MySQL and modern
+            client-side technologies. I enjoy designing systems that follow MVC
+            principles, are easy to maintain, and feel snappy to use.
+          </p>
+          <ul class="info-list">
+            <li>
+              <span>Education</span> Borg El Arab University of Technology —
+              Information Technology
+            </li>
+            <li>
+              <span>Training</span> ITI — Full Stack Web Development using PHP
+              (120 hrs)
+            </li>
+            <li>
+              <span>Focus</span> Laravel · MySQL · API design · Performance
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <div class="section-head">
+          <span class="eyebrow">Skills</span>
+          <h2>Tools I use.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span
+              ><span>PHP</span>
             </div>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="section reveal contact">
-      <div class="section-head">
-        <span class="eyebrow">Contact</span>
-        <h2>Let's build together.</h2>
-      </div>
-      <div class="contact-card">
-        <p>Open to back-end and full-stack opportunities. Reach out and I'll get back to you quickly.</p>
-        <div class="contact-actions">
-          <a href="mailto:albna3272@gmail.com" class="btn btn-primary">Email Me</a>
-          <a href="tel:0155950460" class="btn btn-ghost">0155 950 460</a>
+          <div class="skill-card">
+            <h3>Databases</h3>
+            <div class="tags">
+              <span>MySQL</span><span>MongoDB</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>Frameworks</h3>
+            <div class="tags">
+              <span>Laravel</span><span>Vue.js</span><span>Bootstrap</span
+              ><span>Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <div class="tags">
+              <span>Git</span><span>GitHub</span><span>JMeter</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>AI Tools</h3>
+            <div class="tags">
+              <span>Claude</span><span>ChatGPT-5</span><span>Lovable</span
+              ><span>Vercel</span><span>Google Stitch</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer>
-    <span>© <span id="year"></span> Mohamed Yasser Al-Banna</span>
-    <span>Crafted with HTML · CSS · JS</span>
-  </footer>
+      <section id="projects" class="section reveal">
+        <div class="section-head">
+          <span class="eyebrow">Projects</span>
+          <h2>Selected work.</h2>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <div class="project-num">01</div>
+            <div class="project-body">
+              <h3>Learning Management System (LMS)</h3>
+              <p>
+                A complete LMS with authentication, course management, student
+                enrollment, responsive dashboards and database performance
+                tuning for scalability.
+              </p>
+              <div class="tags">
+                <span>Laravel</span><span>MySQL</span><span>Bootstrap</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://www.youtube.com/watch?v=zScpdvsi8-s"
+                  class="btn btn-sm"
+                  >Watch Video</a
+                >
+                <a
+                  href="https://github.com/Mohamed12-Gg/LMS"
+                  class="btn btn-sm btn-ghost"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-num">02</div>
+            <div class="project-body">
+              <h3>Social Media Platform</h3>
+              <p>
+                Full-stack social platform with posts, comments, profiles,
+                role-based auth (Admin/Subscriber), an admin dashboard with full
+                CRUD, image uploads, and a glassmorphism UI.
+              </p>
+              <div class="tags">
+                <span>Laravel 12</span><span>MySQL</span
+                ><span>Bootstrap 5</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://socialmedia.infinityfreeapp.com/"
+                  class="btn btn-sm"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Mohamed12-Gg/Social-Media"
+                  class="btn btn-sm btn-ghost"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <script src="assets/js/script.js"></script>
-</body>
+      <section id="contact" class="section reveal contact">
+        <div class="section-head">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's build something great.</h2>
+        </div>
+        <div class="contact-card">
+          <p>
+            Open to back-end and full-stack opportunities. Reach out and I'll
+            get back to you quickly.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:albna3272@gmail.com" class="btn btn-primary"
+              >✉ Email Me</a
+            >
+            <a
+              href="https://wa.me/201559504460?text=Welcome%20Mohamed%20need%20you%20for%20job"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost"
+              >💬 WhatsApp</a
+            >
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Mohamed Yasser Al-Banna</span>
+      <span>Crafted with HTML · CSS · JS</span>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
