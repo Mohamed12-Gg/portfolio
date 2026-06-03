@@ -1,263 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Certifications — Mohamed Yasser Al-Banna</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css" />
-<style>
-  .certs-page {
-    padding: 60px 6vw 80px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .certs-page .section-head {
-    margin-bottom: 48px;
-  }
-
-  .cert-viewer-wrap {
-    display: grid;
-    /* استخدام minmax يجعل العمود الثاني مرناً على الشاشات المتوسطة قبل الانتقال للموبايل */
-    grid-template-columns: 1fr minmax(280px, 320px);
-    gap: 32px;
-    align-items: start;
-    margin-bottom: 60px;
-    padding-bottom: 60px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .cert-viewer-wrap:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .cert-embed-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    width: 100%;
-  }
-
-  .cert-embed-box img {
-    width: 100%;
-    height: auto; /* لضمان عدم تشوه أبعاد الصورة */
-    display: block;
-    border-radius: 20px;
-    object-fit: contain;
-  }
-
-  .cert-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: sticky;
-    top: 90px;
-    width: 100%;
-  }
-
-  .cert-info-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 24px; /* تقليل البادينج قليلاً ليناسب الشاشات الصغيرة */
-  }
-
-  .cert-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    gap: 12px;
-  }
-
-  .cert-info-card .cert-num {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #7c5cff, #22d3ee);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Sora', sans-serif;
-    font-weight: 800;
-    font-size: 16px;
-    color: #0b0d12;
-    flex-shrink: 0;
-  }
-
-  .cert-logo-box {
-    width: 64px;
-    height: 64px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    background: var(--bg-2);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .cert-logo-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 6px;
-  }
-
-  .cert-logo-box .cert-logo-fallback {
-    font-family: 'Sora', sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-    color: #c4b6ff;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .cert-info-card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    line-height: 1.35;
-  }
-
-  .cert-info-card .cert-issuer {
-    color: #c4b6ff;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    display: block;
-  }
-
-  .cert-info-card .cert-role {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  .cert-info-card .divider {
-    height: 1px;
-    background: var(--border);
-    margin-bottom: 20px;
-  }
-
-  .cert-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .cert-actions .btn {
-    justify-content: center;
-    border-radius: 12px;
-    width: 100%;
-  }
-
-  .cert-highlight-card {
-    background: linear-gradient(135deg, rgba(124,92,255,.12), rgba(34,211,238,.08));
-    border: 1px solid rgba(124,92,255,.25);
-    border-radius: 20px;
-    padding: 20px;
-  }
-
-  .cert-highlight-card h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 14px;
-    color: #c4b6ff;
-  }
-
-  .cert-highlight-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .cert-highlight-list li {
-    font-size: 13px;
-    color: var(--muted);
-    padding-left: 14px;
-    border-left: 2px solid rgba(124,92,255,.4);
-    line-height: 1.5;
-  }
-
-  .cert-highlight-list li strong {
-    color: var(--text);
-    display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-bottom: 2px;
-  }
-
-  /* ── تحسين التجاوب للشاشات المتوسطة والصغيرة ── */
-  @media (max-width: 880px) {
-    .certs-page {
-      padding: 40px 5vw 60px;
-    }
-    
-    .cert-viewer-wrap {
-      grid-template-columns: 1fr; /* تحويل العناصر لتصبح فوق بعضها */
-      gap: 24px;
-      margin-bottom: 40px;
-      padding-bottom: 40px;
-    }
-    
-    .cert-sidebar {
-      position: static; /* إلغاء التثبيت الجانبي ليتحرك بسلاسة */
-    }
-  }
-
-  @media (max-width: 480px) {
-    .certs-page {
-      padding: 32px 4vw 40px;
-    }
-    
-    .certs-page .section-head {
-      margin-bottom: 32px;
-    }
-
-    .cert-info-card {
-      padding: 20px;
-    }
-    
-    /* جعل أزرار التواصل تظهر بشكل أفضل على الموبايل الصغير */
-    .cert-actions {
-      gap: 8px;
-    }
-  }
-</style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Certifications — Mohamed Yasser Al-Banna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
 
-  <header class="nav">
+<header class="nav">
     <a href="../../index.html" class="logo">MY<span>.</span></a>
     <nav>
-      <a href="../../index.html#about">About</a>
-      <a href="../../index.html#skills">Skills</a>
-      <a href="../../index.html#projects">Projects</a>
-      <a href="certifications.html" style="color: var(--text)">Certifications</a>
-      <a href="cv.html">CV</a>
-      <a href="../../index.html#contact">Contact</a>
+        <a href="../../index.html#about">About</a>
+        <a href="../../index.html#skills">Skills</a>
+        <a href="../../index.html#projects">Projects</a>
+        <a href="certifications.html" style="color:var(--text)">Certifications</a>
+        <a href="cv.html">CV</a>
+        <a href="../../index.html#contact">Contact</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <a href="../../../../index.html#contact" class="btn btn-ghost">Hire Me</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+        <a href="../../index.html#contact" class="btn btn-ghost">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
-  </header>
+</header>
 
-  <div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav">
     <a href="../../index.html#about" class="mobile-link">About</a>
     <a href="../../index.html#skills" class="mobile-link">Skills</a>
     <a href="../../index.html#projects" class="mobile-link">Projects</a>
@@ -265,133 +37,59 @@
     <a href="cv.html" class="mobile-link">CV</a>
     <a href="../../index.html#contact" class="mobile-link">Contact</a>
     <div class="mobile-cta">
-      <a href="../../index.html#contact" class="btn btn-primary mobile-link">Hire Me</a>
+        <a href="../../index.html#contact" class="btn btn-primary mobile-link">Hire Me</a>
     </div>
-  </div>
+</div>
 
-  <main>
+<main>
     <div class="certs-page">
-
-      <div class="section-head reveal">
-        <span class="eyebrow">Certifications</span>
-        <h2>Certificates &amp; Courses.</h2>
-      </div>
-
-      <!-- ===== شهادة 1: ITI ===== -->
-      <div class="cert-viewer-wrap reveal">
-
-        <div class="cert-embed-box">
-          <img src="../images/iti.png" alt="ITI Certificate — Full Stack Web Development using PHP" />
+        <div class="section-head reveal">
+            <span class="eyebrow">Certifications</span>
+            <h2>Certificates &amp; Courses.</h2>
         </div>
 
-        <div class="cert-sidebar">
-          <div class="cert-info-card">
-            <div class="cert-top-row">
-              <div class="cert-num">01</div>
-              <div class="cert-logo-box">
-                <img src="../images/ITI_logo.png" alt="ITI Logo"
-                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-                <span class="cert-logo-fallback" style="display:none">ITI</span>
-              </div>
+        <div class="cert-viewer-wrap reveal">
+            <div class="cert-embed-box">
+                <img src="../images/iti.png" alt="ITI Certificate — Full Stack Web Development using PHP"/>
             </div>
-            <h3>Full Stack Web Development using PHP</h3>
-            <span class="cert-issuer">Information Technology Institute (ITI)</span>
-            <span class="cert-role">Aug – Sep 2025 · 120 hrs</span>
-            <div class="divider"></div>
-            <div class="cert-actions">
-              <a href="https://iti.gov.eg" target="_blank" rel="noopener" class="btn btn-primary">🌐 Visit ITI</a>
-              <a href="../../index.html#contact" class="btn btn-ghost">✉ Contact Me</a>
-              <a href="https://wa.me/201559504460?text=Welcome%20Mohamed%20need%20you%20for%20job" target="_blank" rel="noopener" class="btn btn-ghost">💬 WhatsApp</a>
+            <div class="cert-sidebar">
+                <div class="cert-info-card">
+                    <div class="cert-top-row">
+                        <div class="cert-num">01</div>
+                        <div class="cert-logo-box">
+                            <img src="../images/ITI_logo.png" alt="ITI Logo"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                            <span class="cert-logo-fallback" style="display:none">ITI</span>
+                        </div>
+                    </div>
+                    <h3>Full Stack Web Development using PHP</h3>
+                    <span class="cert-issuer">Information Technology Institute (ITI)</span>
+                    <span class="cert-role">Aug – Sep 2025 · 120 hrs</span>
+                    <div class="divider"></div>
+                    <div class="cert-actions">
+                        <a href="https://iti.gov.eg" target="_blank" rel="noopener" class="btn btn-primary">🌐 Visit ITI</a>
+                        <a href="../../index.html#contact" class="btn btn-ghost">✉ Contact Me</a>
+                        <a href="https://wa.me/201559504460?text=Welcome%20Mohamed%20need%20you%20for%20job" target="_blank" rel="noopener" class="btn btn-ghost">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <div class="cert-highlight-card">
+                    <h4>Course Details</h4>
+                    <ul class="cert-highlight-list">
+                        <li><strong>Issuer</strong>Information Technology Institute</li>
+                        <li><strong>Duration</strong>120 hrs · Aug – Sep 2025</li>
+                        <li><strong>Topics</strong>PHP · Laravel · MySQL · Client-Side (48h)</li>
+                        <li><strong>Signed by</strong>Dr. Heba Saleh — Chairman, ITI</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-
-          <div class="cert-highlight-card">
-            <h4>Course Details</h4>
-            <ul class="cert-highlight-list">
-              <li>
-                <strong>Issuer</strong>
-                Information Technology Institute
-              </li>
-              <li>
-                <strong>Duration</strong>
-                120 hrs · Aug – Sep 2025
-              </li>
-              <li>
-                <strong>Topics</strong>
-                PHP · Laravel · MySQL · Client-Side (48h)
-              </li>
-              <li>
-                <strong>Signed by</strong>
-                Dr. Heba Saleh — Chairman, ITI
-              </li>
-            </ul>
-          </div>
         </div>
-
-      </div>
-      <!-- ===== نهاية شهادة 1 ===== -->
-
-      <!-- ===== شهادة 2: placeholder ===== -->
-      <!-- <div class="cert-viewer-wrap reveal">
-
-        <div class="cert-embed-box" style="min-height:300px; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, rgba(124,92,255,.08), rgba(34,211,238,.05)); border: 2px dashed var(--border);">
-          <span style="color:var(--muted); font-size:15px;">📄 Certificate Image</span>
-        </div>
-
-        <div class="cert-sidebar">
-          <div class="cert-info-card">
-            <div class="cert-top-row">
-              <div class="cert-num">02</div>
-              <div class="cert-logo-box">
-                <span class="cert-logo-fallback">?</span>
-              </div>
-            </div>
-            <h3>Certificate Name</h3>
-            <span class="cert-issuer">Issuer Name</span>
-            <span class="cert-role">Year · Duration</span>
-            <div class="divider"></div>
-            <div class="cert-actions">
-              <a href="#" class="btn btn-primary">🌐 Visit Website</a>
-              <a href="../../index.html#contact" class="btn btn-ghost">✉ Contact Me</a>
-            </div>
-          </div>
-
-          <div class="cert-highlight-card">
-            <h4>Course Details</h4>
-            <ul class="cert-highlight-list">
-              <li><strong>Issuer</strong>Issuer Name</li>
-              <li><strong>Duration</strong>X hrs · Year</li>
-              <li><strong>Topics</strong>Topic 1 · Topic 2</li>
-            </ul>
-          </div>
-        </div>
-
-      </div> -->
-      <!-- ===== نهاية شهادة 2 ===== -->
-
     </div>
-  </main>
+</main>
 
-  <footer>
+<footer>
     <span>© <span id="year"></span> Mohamed Yasser Al-Banna</span>
-  </footer>
+</footer>
 
-  <script src="../js/script.js"></script>
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  </script>
+<script src="../js/script.js"></script>
 </body>
 </html>
