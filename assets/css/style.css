@@ -1254,6 +1254,15 @@ footer {
     background-size: 200% 100%;
 }
 
+.e-commerce {
+    height: 100%;
+    width: 50%;      /* here */
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f97316, #fbbf24); 
+    animation: shimmer 2s ease-in-out infinite;
+    background-size: 200% 100%;
+}
+
 @keyframes shimmer {
     0%   { background-position: 200% 0; } 
     100% { background-position: -200% 0; }
