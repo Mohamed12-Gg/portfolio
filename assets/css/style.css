@@ -959,20 +959,51 @@ footer {
 ══════════════════════════════════════ */
 @media(max-width:880px) {
 
-    /* 1. إخفاء الروابط العادية تماماً ومنع الـ Flex الموروث */
-    .nav nav {
-        display: none !important;
+    /* 1. عرض النav الأصلية عادي بدل ما تتخبى وراء الهامبرغر — وتفضل في نفس السطر لو في مكان */
+    .nav {
+        flex-wrap: wrap;
+        row-gap: 10px;
     }
 
-    /* 2. منع العناصر الخارجية من عمل أسكرول أفقي */
+    .nav nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    .nav nav a {
+        font-size: 13px;
+    }
+
+    /* الهامبرغر مش لازم دلوقتي لأن الروابط ظاهرة عادي */
+    .hamburger {
+        display: none;
+    }
+
+    /* 2. منع العناصر الخارجية من عمل أسكرول أفقي — clip بدل hidden عشان مايكسرش sticky في Safari */
     html,
     body {
-        overflow-x: hidden;
+        overflow-x: clip;
         width: 100%;
     }
 
-    .hamburger {
-        display: flex
+    /* التابات: صف واحد عادي جمب بعض، النص سطر واحد */
+    .cert-tabs {
+        flex-wrap: nowrap;
+        overflow: visible;
+        gap: 8px;
+    }
+
+    .cert-tab {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
     }
 
     .hero-grid,
@@ -1033,14 +1064,22 @@ footer {
 ══════════════════════════════════════ */
 @media(max-width:480px) {
 
-    /* التأكيد على منع الأسكرول في الشاشات الصغيرة جداً */
+    /* التأكيد على منع الأسكرول في الشاشات الصغيرة جداً — clip بدل hidden عشان مايكسرش sticky */
     html,
     body {
-        overflow-x: hidden;
+        overflow-x: clip;
     }
 
     .nav {
         padding: 14px 5vw
+    }
+
+    .nav nav {
+        gap: 6px 12px;
+    }
+
+    .nav nav a {
+        font-size: 12px;
     }
 
     .hero {
@@ -1141,7 +1180,7 @@ footer {
 
     /* Certs */
     .certs-page {
-        padding: 32px 4vw 40px
+        padding: 32px 4vw 40px;
     }
 
     .certs-page .section-head {
@@ -1267,3 +1306,297 @@ footer {
     0%   { background-position: 200% 0; } 
     100% { background-position: -200% 0; }
 }
+
+
+/* certicate */
+
+ /* ── Tabs ── */
+      .cert-tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        position: sticky;
+        top: var(--nav-h, 76px);
+        z-index: 40;
+        background: rgba(11, 13, 18, 0.97);
+        backdrop-filter: blur(12px);
+        padding: 12px 0;
+        margin-left: -6vw;
+        margin-right: -6vw;
+        padding-left: 6vw;
+        padding-right: 6vw;
+        border-bottom: 1px solid var(--border);
+      }
+      .cert-tab {
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: "Inter", sans-serif;
+      }
+      .cert-tab:hover {
+        border-color: rgba(124, 92, 255, 0.45);
+        color: var(--text);
+        background: var(--surface);
+      }
+      .cert-tab.active {
+        background: var(--surface);
+        color: var(--text);
+        border-color: rgba(124, 92, 255, 0.6);
+        border-bottom: 2px solid #7c5cff;
+      }
+
+      /* ── Panels ── */
+      .cert-panel {
+        display: none;
+      }
+      .cert-panel.active {
+        display: block;
+      }
+
+      /* ── Card ── */
+      .cert-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 28px;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .cert-card:hover {
+        border-color: rgba(124, 92, 255, 0.4);
+        box-shadow: 0 16px 48px -16px rgba(124, 92, 255, 0.3);
+      }
+      .cert-card:last-child {
+        margin-bottom: 0;
+      }
+
+      /* image */
+      .cert-img-wrap {
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg);
+      }
+      .cert-img-wrap img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: contain;
+        display: block;
+      }
+      .cert-img-placeholder {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          rgba(124, 92, 255, 0.06),
+          rgba(34, 211, 238, 0.04)
+        );
+        border-bottom: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 14px;
+        gap: 10px;
+      }
+
+      /* header */
+      .cert-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--border);
+      }
+      .cert-logo-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .cert-logo-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 6px;
+      }
+      .cert-logo-fallback {
+        font-family: "Sora", sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        color: #c4b6ff;
+      }
+      .cert-header-meta {
+        flex: 1;
+      }
+      .cert-header-meta h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: var(--text);
+      }
+      .cert-header-meta .issuer {
+        font-size: 13px;
+        color: #c4b6ff;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 2px;
+      }
+      .cert-header-meta .period {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .cert-badge {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--grad);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Sora", sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        color: #0b0d12;
+        flex-shrink: 0;
+      }
+
+      /* body */
+      .cert-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cert-learned {
+        padding: 20px 24px;
+        border-right: 1px solid var(--border);
+      }
+      .cert-details {
+        padding: 20px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .col-label {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 14px;
+        display: block;
+      }
+
+      .learned-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .learned-list li {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+        padding-left: 12px;
+        border-left: 2px solid rgba(124, 92, 255, 0.5);
+      }
+
+      .detail-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .detail-row .dl {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        display: block;
+        margin-bottom: 3px;
+      }
+      .detail-row .dv {
+        font-size: 13px;
+        color: var(--text);
+      }
+
+      .cert-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: auto;
+      }
+      .cert-btns .btn {
+        justify-content: center;
+        border-radius: 12px;
+      }
+
+      /* empty */
+      .cert-empty {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--muted);
+        border: 2px dashed var(--border);
+        border-radius: 20px;
+      }
+      .cert-empty .icon {
+        font-size: 40px;
+        display: block;
+        margin-bottom: 14px;
+      }
+      .cert-empty p {
+        font-size: 15px;
+      }
+
+      /* responsive */
+      @media (max-width: 768px) {
+        .cert-body {
+          grid-template-columns: 1fr;
+        }
+        .cert-learned {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .cert-header {
+          flex-wrap: wrap;
+        }
+      }
+      @media (max-width: 480px) {
+        .cert-header {
+          padding: 16px;
+        }
+        .cert-learned,
+        .cert-details {
+          padding: 16px;
+        }
+        .cert-header-meta h3 {
+          font-size: 16px;
+        }
+
+        /* ── Cert Tabs: صف واحد جمب بعض على الموبايل الصغير جدًا ── */
+        .cert-tabs {
+          gap: 6px;
+        }
+
+        .cert-tab {
+          padding: 9px 6px;
+          font-size: 11.5px;
+        }
+      }
