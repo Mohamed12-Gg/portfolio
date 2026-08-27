@@ -62,11 +62,18 @@
 
         <!-- Tabs -->
         <div class="cert-tabs">
-          <button class="cert-tab active" data-tab="web">
-            🌐 Web Development
+          <button class="cert-tab active" data-tab="all">
+            📚 All <span class="cert-tab-count">(11)</span>
           </button>
-          <button class="cert-tab" data-tab="security">🔐 Cybersecurity</button>
-          <button class="cert-tab" data-tab="general">🎓 General</button>
+          <button class="cert-tab" data-tab="web">
+            🌐 Web Development <span class="cert-tab-count">(2)</span>
+          </button>
+          <button class="cert-tab" data-tab="security">
+            🔐 Cybersecurity <span class="cert-tab-count">(8)</span>
+          </button>
+          <button class="cert-tab" data-tab="general">
+            🎓 General <span class="cert-tab-count">(1)</span>
+          </button>
         </div>
 
         <!-- Web Development -->
@@ -76,6 +83,7 @@
 
             <!-- Project 1 -->
             <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-web">🌐 Web Development</span>
               <img
                 src="../images/certificate/web/iti/iti.png"
                 alt="ITI Certificate"
@@ -187,6 +195,7 @@
           <!--Start Project 2 web -->
           <div class="cert-card reveal">
             <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-web">🌐 Web Development</span>
               <div class="cert-img-placeholder">📄 Certificate Image</div>
             </div>
             <div class="cert-header">
@@ -236,19 +245,32 @@
         <!--end Project 2 web -->
 
         <!--Start Project 1 cyber security -->
-        <div class="cert-panel" id="tab-security">
+        <div class="cert-panel active" id="tab-security">
+          <!-- 01: Cybersecurity For All -->
           <div class="cert-card reveal">
             <div class="cert-img-wrap">
-              <div class="cert-img-placeholder">📄 Certificate Image</div>
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/cybersecurity-for-all.png"
+                alt="Cybersecurity For All Certificate"
+              />
             </div>
             <div class="cert-header">
               <div class="cert-logo-box">
-                <span class="cert-logo-fallback">?</span>
+                <img
+                  src="../images/certificate/web/iti/iti_logo.png"
+                  alt="ITI Logo"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <span class="cert-logo-fallback" style="display: none">ITI</span>
               </div>
               <div class="cert-header-meta">
-                <h3>Certificate Name</h3>
-                <span class="issuer">Issuer Name</span>
-                <span class="period">Year · Duration</span>
+                <h3>Cybersecurity For All</h3>
+                <span class="issuer">ITI Mahara-Tech · Cybersecurity Academy</span>
+                <span class="period">Jan 2026 · 37 mins</span>
               </div>
               <div class="cert-badge">01</div>
             </div>
@@ -256,9 +278,9 @@
               <div class="cert-learned">
                 <span class="col-label">💡 What I Learned</span>
                 <ul class="learned-list">
-                  <li>...</li>
-                  <li>...</li>
-                  <li>...</li>
+                  <li>Core cybersecurity concepts: confidentiality, integrity, and availability.</li>
+                  <li>Common cyber threats and how everyday users get targeted.</li>
+                  <li>Basic digital hygiene and safe-browsing best practices.</li>
                 </ul>
               </div>
               <div class="cert-details">
@@ -266,13 +288,20 @@
                   <span class="col-label">📋 Course Details</span>
                   <div class="detail-rows">
                     <div class="detail-row">
-                      <span class="dl">Issuer</span><span class="dv">...</span>
+                      <span class="dl">Issuer</span
+                      ><span class="dv">ITI Platform (Mahara-Tech)</span>
                     </div>
                     <div class="detail-row">
-                      <span class="dl">Duration</span><span class="dv">...</span>
+                      <span class="dl">Duration</span
+                      ><span class="dv">37 Minutes · Jan 2026</span>
                     </div>
                     <div class="detail-row">
-                      <span class="dl">Topics</span><span class="dv">...</span>
+                      <span class="dl">Topics</span
+                      ><span class="dv">Cybersecurity Fundamentals</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Verification</span
+                      ><span class="dv">2aHqKmpDP2</span>
                     </div>
                   </div>
                 </div>
@@ -284,15 +313,400 @@
               </div>
             </div>
           </div>
-          <!-- paste cert-card here when ready — same structure as above -->
+
+          <!-- 02: Cybersecurity Jobs -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/cybersecurity-jobs.png"
+                alt="Cybersecurity Jobs Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">KS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Cybersecurity Jobs</h3>
+                <span class="issuer">Khlybalak Security</span>
+                <span class="period">Feb 2026 · Live Session</span>
+              </div>
+              <div class="cert-badge">02</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Overview of career paths and roles across the cybersecurity field.</li>
+                  <li>Skills and certifications employers look for in the industry.</li>
+                  <li>How to start building a practical cybersecurity career track.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Khlybalak Security</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">Session · 6 Feb 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Cybersecurity Careers</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03: Red Hat System Administration I -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/redhat-sysadmin.png"
+                alt="Red Hat System Administration I Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <img
+                  src="../images/certificate/web/iti/iti_logo.png"
+                  alt="ITI Logo"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <span class="cert-logo-fallback" style="display: none">ITI</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Red Hat System Administration I</h3>
+                <span class="issuer">ITI Mahara-Tech</span>
+                <span class="period">Feb 2026 · 9 hrs 11 mins</span>
+              </div>
+              <div class="cert-badge">03</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Linux command-line fundamentals and file system navigation.</li>
+                  <li>User, group, and permission management on Red Hat Enterprise Linux.</li>
+                  <li>Core system administration tasks: processes, storage, and services.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">ITI Platform (Mahara-Tech)</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">9 hrs 11 mins · 27 Feb 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Linux · System Administration</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Verification</span><span class="dv">4nhQwuLwMq</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04: Cybersecurity x AI -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/cybersecurity-ai.png"
+                alt="Cybersecurity x AI Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">KS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Cybersecurity × AI</h3>
+                <span class="issuer">Khlybalak Security</span>
+                <span class="period">June 2026 · Live Session</span>
+              </div>
+              <div class="cert-badge">04</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>How AI is reshaping both offensive and defensive security work.</li>
+                  <li>Practical use cases of AI tools inside a security workflow.</li>
+                  <li>Risks and limitations of relying on AI in security decisions.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Khlybalak Security</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">Session · 13 June 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">AI · Cybersecurity</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05: Cybersecurity Roadmap for Beginners -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/cybersecurity-roadmap.png"
+                alt="Cybersecurity Roadmap for Beginners Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">KS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Cybersecurity Roadmap for Beginners</h3>
+                <span class="issuer">Khlybalak Security</span>
+                <span class="period">July 2026 · Live Session</span>
+              </div>
+              <div class="cert-badge">05</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>A structured learning path for starting out in cybersecurity.</li>
+                  <li>Key domains to focus on early: networking, Linux, and security fundamentals.</li>
+                  <li>How to plan a self-study track toward a security specialization.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Khlybalak Security</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">Session · 10 July 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Cybersecurity Roadmap</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06: EHFA Arena - Ethical Hacking for Arabs -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/ehfa-arena.png"
+                alt="EHFA Arena - Ethical Hacking for Arabs Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">KS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>EHFA Arena — Ethical Hacking for Arabs</h3>
+                <span class="issuer">Khlybalak Security</span>
+                <span class="period">Jul 2026 · 90 Days (Trial Cohort)</span>
+              </div>
+              <div class="cert-badge">06</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Built a real Pentester mindset through hands-on labs and challenges.</li>
+                  <li>Worked through 43+ lessons across 6 sections at Operator level.</li>
+                  <li>Applied practical penetration testing skills to real-world scenarios.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Khlybalak Security</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">90 Days · Completed 23 Jul 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Ethical Hacking · Pentesting</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Level</span><span class="dv">Operator · 43+ Lessons · 6 Sections</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 07: Unseen Shadows: Digital Opsec & Isolated Operations -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/unseen-shadows.png"
+                alt="Unseen Shadows: Digital Opsec & Isolated Operations Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">KS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Unseen Shadows: Digital Opsec &amp; Isolated Operations</h3>
+                <span class="issuer">Khlybalak Security</span>
+                <span class="period">Aug 2026 · Live Session</span>
+              </div>
+              <div class="cert-badge">07</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Operational security (OPSEC) principles for protecting digital identity.</li>
+                  <li>Techniques for isolating and compartmentalizing sensitive operations.</li>
+                  <li>Practical habits for reducing a personal digital footprint.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Khlybalak Security</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">Session · 7 Aug 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Digital OPSEC · Isolated Operations</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 08: Basics of Pentesting & Pentesting Methodologies -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-security">🔐 Cybersecurity</span>
+              <img
+                src="../images/certificate/cyber/pentesting-basics.png"
+                alt="Basics of Pentesting & Pentesting Methodologies Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">KS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Basics of Pentesting &amp; Pentesting Methodologies</h3>
+                <span class="issuer">Khlybalak Security</span>
+                <span class="period">Aug 2026 · Live Session</span>
+              </div>
+              <div class="cert-badge">08</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Fundamentals of penetration testing and its core objectives.</li>
+                  <li>Standard pentesting methodologies and how engagements are structured.</li>
+                  <li>Part of the "Cybersecurity Roadmap for Beginners" track.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Khlybalak Security</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">Session · 17 Aug 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Pentesting Methodologies</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--end Project 1 cyber security -->
 
 
         <!--Start Project 1 general -->
-        <div class="cert-panel" id="tab-general">
+        <div class="cert-panel active" id="tab-general">
           <div class="cert-card reveal">
             <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-general">🎓 General</span>
               <div class="cert-img-placeholder">📄 Certificate Image</div>
             </div>
             <div class="cert-header">
@@ -360,9 +774,16 @@
             .querySelectorAll(".cert-panel")
             .forEach((p) => p.classList.remove("active"));
           tab.classList.add("active");
-          document
-            .getElementById("tab-" + tab.dataset.tab)
-            .classList.add("active");
+          if (tab.dataset.tab === "all") {
+            // "All" shows every category panel together
+            document
+              .querySelectorAll(".cert-panel")
+              .forEach((p) => p.classList.add("active"));
+          } else {
+            document
+              .getElementById("tab-" + tab.dataset.tab)
+              .classList.add("active");
+          }
         });
       });
       // يحسب ارتفاع الـ nav فعليًا (بيتغير حسب الشاشة) ويحطه كـ CSS variable

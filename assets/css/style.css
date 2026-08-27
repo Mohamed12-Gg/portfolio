@@ -1366,6 +1366,14 @@ footer {
         border-color: rgba(124, 92, 255, 0.6);
         border-bottom: 2px solid #7c5cff;
       }
+      .cert-tab-count {
+        opacity: 0.6;
+        font-weight: 500;
+        font-size: 0.9em;
+      }
+      .cert-tab.active .cert-tab-count {
+        opacity: 0.85;
+      }
 
       /* ── Panels ── */
       .cert-panel {
@@ -1401,6 +1409,34 @@ footer {
         background: var(--bg);
         border-radius: 20px 20px 0 0;
         overflow: hidden;
+        position: relative;
+      }
+      .cert-category-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 5;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        font-family: "Inter", sans-serif;
+        color: #fff;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 14px -4px rgba(0, 0, 0, 0.5);
+      }
+      .cert-category-badge.cat-web {
+        background: rgba(56, 132, 255, 0.85);
+      }
+      .cert-category-badge.cat-security {
+        background: rgba(255, 149, 0, 0.85);
+      }
+      .cert-category-badge.cat-general {
+        background: rgba(124, 92, 255, 0.85);
       }
       .cert-img-wrap img {
         width: 100%;
@@ -1599,6 +1635,12 @@ footer {
         }
         .cert-header {
           flex-wrap: wrap;
+        }
+        .cert-category-badge {
+          top: 10px;
+          right: 10px;
+          padding: 5px 11px;
+          font-size: 11px;
         }
       }
       @media (max-width: 480px) {
