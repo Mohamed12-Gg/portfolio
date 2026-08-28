@@ -63,16 +63,16 @@
         <!-- Tabs -->
         <div class="cert-tabs">
           <button class="cert-tab active" data-tab="all">
-            📚 All <span class="cert-tab-count">(11)</span>
+            📚 All <span class="cert-tab-count" data-count-for="all">(0)</span>
           </button>
           <button class="cert-tab" data-tab="web">
-            🌐 Web Development <span class="cert-tab-count">(2)</span>
+            🌐 Web Development <span class="cert-tab-count" data-count-for="web">(0)</span>
           </button>
           <button class="cert-tab" data-tab="security">
-            🔐 Cybersecurity <span class="cert-tab-count">(8)</span>
+            🔐 Cybersecurity <span class="cert-tab-count" data-count-for="security">(0)</span>
           </button>
           <button class="cert-tab" data-tab="general">
-            🎓 General <span class="cert-tab-count">(1)</span>
+            🎓 General <span class="cert-tab-count" data-count-for="general">(0)</span>
           </button>
         </div>
 
@@ -196,16 +196,19 @@
           <div class="cert-card reveal">
             <div class="cert-img-wrap">
               <span class="cert-category-badge cat-web">🌐 Web Development</span>
-              <div class="cert-img-placeholder">📄 Certificate Image</div>
+              <img
+                src="../images/certificate/web/laravel-bootcamp.jpeg"
+                alt="Back-end Laravel Bootcamp Certificate"
+              />
             </div>
             <div class="cert-header">
               <div class="cert-logo-box">
-                <span class="cert-logo-fallback">?</span>
+                <span class="cert-logo-fallback">HV</span>
               </div>
               <div class="cert-header-meta">
-                <h3>Certificate Name</h3>
-                <span class="issuer">Issuer Name</span>
-                <span class="period">Year · Duration</span>
+                <h3>Back-end Laravel Bootcamp</h3>
+                <span class="issuer">HumaVolve</span>
+                <span class="period">Aug 2026 · 1 Week</span>
               </div>
               <div class="cert-badge">02</div>
             </div>
@@ -213,9 +216,9 @@
               <div class="cert-learned">
                 <span class="col-label">💡 What I Learned</span>
                 <ul class="learned-list">
-                  <li>...</li>
-                  <li>...</li>
-                  <li>...</li>
+                  <li>Intensive hands-on backend development using Laravel over a focused one-week sprint.</li>
+                  <li>Applied core Laravel concepts in a bootcamp-paced, project-driven setting.</li>
+                  <li>Strengthened backend fundamentals under mentorship guidance.</li>
                 </ul>
               </div>
               <div class="cert-details">
@@ -223,13 +226,69 @@
                   <span class="col-label">📋 Course Details</span>
                   <div class="detail-rows">
                     <div class="detail-row">
-                      <span class="dl">Issuer</span><span class="dv">...</span>
+                      <span class="dl">Issuer</span><span class="dv">HumaVolve</span>
                     </div>
                     <div class="detail-row">
-                      <span class="dl">Duration</span><span class="dv">...</span>
+                      <span class="dl">Duration</span><span class="dv">1 Week · Completed 9 Aug 2026</span>
                     </div>
                     <div class="detail-row">
-                      <span class="dl">Topics</span><span class="dv">...</span>
+                      <span class="dl">Topics</span><span class="dv">Laravel · Back-End Development</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Start Project 3 web -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-web">🌐 Web Development</span>
+              <img
+                src="../images/certificate/web/sphinx-web-dev.png"
+                alt="Certificate of Appreciation - Web Development"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">SPS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Web Development Training (HTML &amp; CSS)</h3>
+                <span class="issuer">SPHINX Programming Society (SPS)</span>
+                <span class="period">4-Month Program</span>
+              </div>
+              <div class="cert-badge">03</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Built strong foundations in HTML and CSS over a four-month program.</li>
+                  <li>Practiced consistent, hands-on web development training with steady commitment.</li>
+                  <li>Recognized with an Excellent grade for performance throughout the program.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">SPHINX Programming Society (SPS)</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">4 Months</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">HTML · CSS</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Grade</span><span class="dv">Excellent</span>
                     </div>
                   </div>
                 </div>
@@ -704,19 +763,23 @@
 
         <!--Start Project 1 general -->
         <div class="cert-panel active" id="tab-general">
+          <!-- 01: LinkedIn Mastery Training -->
           <div class="cert-card reveal">
             <div class="cert-img-wrap">
               <span class="cert-category-badge cat-general">🎓 General</span>
-              <div class="cert-img-placeholder">📄 Certificate Image</div>
+              <img
+                src="../images/certificate/general/linkedin-mastery.png"
+                alt="LinkedIn Mastery Training Certificate"
+              />
             </div>
             <div class="cert-header">
               <div class="cert-logo-box">
-                <span class="cert-logo-fallback">?</span>
+                <span class="cert-logo-fallback">E2b</span>
               </div>
               <div class="cert-header-meta">
-                <h3>Certificate Name</h3>
-                <span class="issuer">Issuer Name</span>
-                <span class="period">Year · Duration</span>
+                <h3>LinkedIn Mastery Training</h3>
+                <span class="issuer">EDU2be — For Youth and Development</span>
+                <span class="period">Aug 2025</span>
               </div>
               <div class="cert-badge">01</div>
             </div>
@@ -724,9 +787,9 @@
               <div class="cert-learned">
                 <span class="col-label">💡 What I Learned</span>
                 <ul class="learned-list">
-                  <li>...</li>
-                  <li>...</li>
-                  <li>...</li>
+                  <li>How to build a strong, professional presence on LinkedIn.</li>
+                  <li>Practical networking strategies to grow meaningful connections.</li>
+                  <li>Techniques for presenting skills and experience effectively online.</li>
                 </ul>
               </div>
               <div class="cert-details">
@@ -734,13 +797,13 @@
                   <span class="col-label">📋 Course Details</span>
                   <div class="detail-rows">
                     <div class="detail-row">
-                      <span class="dl">Issuer</span><span class="dv">...</span>
+                      <span class="dl">Issuer</span><span class="dv">EDU2be</span>
                     </div>
                     <div class="detail-row">
-                      <span class="dl">Duration</span><span class="dv">...</span>
+                      <span class="dl">Duration</span><span class="dv">Aug 2025</span>
                     </div>
                     <div class="detail-row">
-                      <span class="dl">Topics</span><span class="dv">...</span>
+                      <span class="dl">Topics</span><span class="dv">LinkedIn · Professional Networking</span>
                     </div>
                   </div>
                 </div>
@@ -752,7 +815,168 @@
               </div>
             </div>
           </div>
-          <!-- paste cert-card here when ready — same structure as above -->
+
+          <!-- 02: Excel 2019 - Access 2019 -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-general">🎓 General</span>
+              <img
+                src="../images/certificate/general/excel-access.jpg"
+                alt="Excel 2019 - Access 2019 Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">MS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Excel 2019 · Access 2019</h3>
+                <span class="issuer">Microsoft Egypt — Tawar We Ayar</span>
+                <span class="period">Mar 2025</span>
+              </div>
+              <div class="cert-badge">02</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Core spreadsheet skills in Excel: formulas, data organization, and analysis.</li>
+                  <li>Database fundamentals in Access: tables, queries, and forms.</li>
+                  <li>Practical office-productivity workflows using both tools together.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Microsoft Egypt (Tawar We Ayar)</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">11 – 16 Mar 2025</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Excel 2019 · Access 2019</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03: Artificial Intelligence -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-general">🎓 General</span>
+              <img
+                src="../images/certificate/general/artificial-intelligence.png"
+                alt="Artificial Intelligence Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">MS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Artificial Intelligence</h3>
+                <span class="issuer">Microsoft Egypt — Tawar We Ayar</span>
+                <span class="period">Jul 2025</span>
+              </div>
+              <div class="cert-badge">03</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Foundational AI concepts and how they apply to everyday tools.</li>
+                  <li>Introductory hands-on exposure to AI-driven workflows.</li>
+                  <li>How AI fits into the broader Microsoft ecosystem.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Microsoft Egypt (Tawar We Ayar)</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">9 – 11 Jul 2025</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Artificial Intelligence</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04: Getting Started with Copilot -->
+          <div class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <span class="cert-category-badge cat-general">🎓 General</span>
+              <img
+                src="../images/certificate/general/copilot.png"
+                alt="Getting Started with Copilot Certificate"
+              />
+            </div>
+            <div class="cert-header">
+              <div class="cert-logo-box">
+                <span class="cert-logo-fallback">MS</span>
+              </div>
+              <div class="cert-header-meta">
+                <h3>Getting Started with Copilot</h3>
+                <span class="issuer">Microsoft Learn Student Ambassador</span>
+                <span class="period">Feb 2026</span>
+              </div>
+              <div class="cert-badge">04</div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-learned">
+                <span class="col-label">💡 What I Learned</span>
+                <ul class="learned-list">
+                  <li>Core basics of using Microsoft Copilot as an AI assistant.</li>
+                  <li>Practical prompts and workflows to get productive with Copilot quickly.</li>
+                  <li>How Copilot fits into everyday Microsoft tools and tasks.</li>
+                </ul>
+              </div>
+              <div class="cert-details">
+                <div>
+                  <span class="col-label">📋 Course Details</span>
+                  <div class="detail-rows">
+                    <div class="detail-row">
+                      <span class="dl">Issuer</span><span class="dv">Microsoft Learn Student Ambassador</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Duration</span><span class="dv">16 Feb 2026</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Topics</span><span class="dv">Microsoft Copilot</span>
+                    </div>
+                    <div class="detail-row">
+                      <span class="dl">Hosted By</span><span class="dv">Islam Gamal</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-btns">
+                  <a href="../../index.html#contact" class="btn btn-ghost"
+                    >✉ Contact Me</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--end Project 1 general -->
 
@@ -765,6 +989,32 @@
 
     <script src="../js/script.js"></script>
     <script>
+      // يحسب عدد الشهادات (.cert-card) جوه كل تاب تلقائيًا
+      // وبيحدث الرقم جنب اسم كل تاب + رقم "All" الإجمالي
+      // مفيش أي حاجة تتعدل يدويًا هنا، بس ضيف/امسح .cert-card وهو بيحسب لوحده
+      function updateCertCounts() {
+        let total = 0;
+        document.querySelectorAll(".cert-panel[id^='tab-']").forEach((panel) => {
+          const category = panel.id.replace("tab-", "");
+          const cards = panel.querySelectorAll(".cert-card");
+          total += cards.length;
+          // يرقم كل شهادة تلقائيًا (01, 02, 03...) حسب ترتيبها في التاب
+          cards.forEach((card, i) => {
+            const badge = card.querySelector(".cert-badge");
+            if (badge) badge.textContent = String(i + 1).padStart(2, "0");
+          });
+          const countEl = document.querySelector(
+            `.cert-tab-count[data-count-for="${category}"]`
+          );
+          if (countEl) countEl.textContent = `(${cards.length})`;
+        });
+        const allCountEl = document.querySelector(
+          '.cert-tab-count[data-count-for="all"]'
+        );
+        if (allCountEl) allCountEl.textContent = `(${total})`;
+      }
+      updateCertCounts();
+
       document.querySelectorAll(".cert-tab").forEach((tab) => {
         tab.addEventListener("click", () => {
           document
@@ -775,7 +1025,7 @@
             .forEach((p) => p.classList.remove("active"));
           tab.classList.add("active");
           if (tab.dataset.tab === "all") {
-            // "All" shows every category panel together
+            // "All" شايل كل التابس مع بعض
             document
               .querySelectorAll(".cert-panel")
               .forEach((p) => p.classList.add("active"));
